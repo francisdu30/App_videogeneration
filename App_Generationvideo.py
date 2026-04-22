@@ -471,8 +471,7 @@ def export_project_markdown(proj: pd.Series, steps_df: pd.DataFrame) -> str:
             lines += ["### Output", "", output, ""]
         lines += ["---", ""]
 
-    return "
-".join(lines)
+    return "\n".join(lines)
 
 
 def resolve_prompt_variables(prompt: str, steps_df: pd.DataFrame, current_step: int) -> tuple[str, list]:
